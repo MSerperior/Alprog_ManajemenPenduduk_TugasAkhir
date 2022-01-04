@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) {
-        //System.err.println("Hello World");
+        System.err.println("Hello World");
         UniqueArray arr = new UniqueArray();
         
         arr.tambah(new Penduduk(4, "Dany", 18));
@@ -91,7 +91,7 @@ public class Main {
                     System.out.print("Input tidak valid!");
                     break;
             }
-            
+
             System.out.print("Data Penduduk\n1. Tambah\n2. Edit\n3. Hapus\n4. Cari\n5. Tampil\n6. Exit\nPilih menu: ");
             pilihMenu = input.nextInt();
         }
