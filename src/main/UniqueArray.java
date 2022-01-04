@@ -74,4 +74,43 @@ public class UniqueArray {
             }
         }
     }
+
+    /**
+     * Edit usia berdasarkan NIK
+     * @param nik yang dicari
+     * @param nikBaru nik yang baru
+     */
+    public void editNIK(int nik, int nikBaru) {
+        for (int i = 0; i <= n; i++) {
+            if (penduduk[i].NIK == nik) {
+                penduduk[i].NIK = nikBaru;
+            }
+        }
+    }
+
+    /**
+     * Edit usia berdasarkan NIK
+     * @param nik yang dicari
+     * @param namaBaru nama yang baru
+     */
+    public void editNama(int nik, String namaBaru) {
+        for (int i = 0; i <= n; i++) {
+            if (penduduk[i].NIK == nik) {
+                penduduk[i].nama = namaBaru;
+            }
+        }
+    }
+
+    /**
+     * Edit usia berdasarkan NIK
+     * @param nik yang dicari
+     * @param usiaBaru usia yang baru
+     */
+    public void editUsia(int nik, int usiaBaru) {
+        for (int i = 0; i <= n; i++) {
+            if (penduduk[i].NIK == nik) {
+                penduduk[i].usia = usiaBaru;
+            }
+        }
+    }
 }

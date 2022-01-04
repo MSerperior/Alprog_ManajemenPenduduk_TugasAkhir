@@ -13,29 +13,19 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) {
-        System.err.println("Hello World");
+        
         UniqueArray arr = new UniqueArray();
-        
-        arr.tambah(new Penduduk(4, "Dany", 18));
-        arr.tambah(new Penduduk(6, "Ayu", 18));
-        arr.tambah(new Penduduk(2, "Dicky", 18));
-        arr.tambah(new Penduduk(10, "Yudi", 18));
-        arr.tambah(new Penduduk(8, "Lafina", 18));
-        arr.sort(); 
-//        arr.display();
-//        arr.cari(10);
-        
         Scanner input = new Scanner(System.in);
-        int pilihMenu;
-        System.out.print("Data Penduduk\n1. Tambah\n2. Edit\n3. Hapus\n4. Cari\n5. Tampil\n6. Exit\nPilih menu: ");
+        int pilihMenu, pilih;
+        System.out.println("Data Penduduk");
+        System.out.print("=====MENU=====\n1. Tambah\n2. Edit\n3. Hapus\n4. Cari\n5. Tampil\n6. Exit\nPilih menu: ");
         pilihMenu = input.nextInt();
 
         while (pilihMenu!=6) {
             switch (pilihMenu) {
                 case 1:
                     //tambah
-                    System.out.println("///Tambah Data Penduduk///");
-                    System.out.print("Masukan jumlah data: ");
+                    System.out.print("///Tambah Data Penduduk///\nMasukan jumlah data: ");
                     int jumlah = input.nextInt();
                     System.out.println("-------------------------");
                     for (int i = 0; i < jumlah; i++) {
@@ -52,8 +42,34 @@ public class Main {
                     break;
                 case 2:
                     //edit
-                    System.out.println("edit");
-
+                    System.out.print("/////Edit Data Penduduk/////\nMasukan NIK yang diedit: ");
+                    int cari = input.nextInt();
+                    arr.cari(cari);
+                    System.out.println("-------------------------");
+                    System.out.print("Yang akan di edit: \n1. NIK\n2. Nama\n3. Usia\nMasukan pilihan: ");
+                    pilih = input.nextInt();
+                    System.out.println("-------------------------");
+                    switch (pilih) {
+                        case 1:
+                            System.out.print("Masukan NIK baru: ");
+                            int nikBaru = input.nextInt();
+                            arr.editNIK(cari, nikBaru);
+                            arr.sort();
+                            break;
+                        case 2:
+                            System.out.print("Masukan Nama baru: ");
+                            String namaBaru = input.next();
+                            arr.editNama(cari, namaBaru);
+                            break;
+                        case 3:
+                            System.out.print("Masukan Usia baru: ");
+                            int usiaBaru = input.nextInt();
+                            arr.editUsia(cari, usiaBaru);
+                            break;
+                        default:
+                            System.out.println("Input tidak valid!");
+                            break;
+                    }
                     break;
                 case 3:
                     //hapus
@@ -61,8 +77,9 @@ public class Main {
                     break;
                 case 4:
                     //cari
-                    System.out.print("Cari berdasarkan:\n1. NIK\n2. Nama\nMasukan pilihan: ");
-                    int pilih = input.nextInt();
+                    System.out.print("/////Cari Data Penduduk/////\nCari berdasarkan:\n1. NIK\n2. Nama\nMasukan pilihan: ");
+                    pilih = input.nextInt();
+                    System.out.println("-------------------------");
                     switch (pilih) {
                         case 1:
                             System.out.print("Cari NIK: ");
@@ -75,9 +92,10 @@ public class Main {
                             arr.cari(nama);
                             break;
                         default:
-                            System.out.print("Input tidak valid!");
+                            System.out.println("Input tidak valid!");
                             break;
                     }
+                    System.out.println("-------------------------");
                     break;
                 case 5:
                     //tampil
@@ -88,7 +106,7 @@ public class Main {
                     System.exit(0);
                     break;
                 default:
-                    System.out.print("Input tidak valid!");
+                    System.out.println("Input tidak valid!");
                     break;
             }
 
