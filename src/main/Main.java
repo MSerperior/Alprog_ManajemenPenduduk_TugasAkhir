@@ -19,6 +19,7 @@ public class Main {
         arr.tambah(new Penduduk(10, "Yudi", 18));
         arr.tambah(new Penduduk(8, "Lafina", 18));
         arr.sort();
-        arr.display();
+//        arr.display();
+//        arr.cari(10);
     }
 }
