@@ -122,7 +122,6 @@ public class UniqueArray {
                 for(int j = i; j <= n ; j++){
                     penduduk[j] = penduduk[j+1];
                 }  
-                //System.out.println("Data berhasil dihapus");
                 n--;
             }
         }          
