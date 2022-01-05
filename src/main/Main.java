@@ -73,7 +73,10 @@ public class Main {
                     break;
                 case 3:
                     //hapus
-                    System.out.println("hapus");
+                    //cek lagi ya
+                    System.out.print("Masukkan NIK yang akan dihapus: ");                
+                    pilih = input.nextInt();
+                    arr.hapus(pilih);
                     break;
                 case 4:
                     //cari
