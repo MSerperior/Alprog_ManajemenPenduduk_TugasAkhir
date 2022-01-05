@@ -110,7 +110,7 @@ public class Main {
                     break;
             }
 
-            System.out.print("Data Penduduk\n1. Tambah\n2. Edit\n3. Hapus\n4. Cari\n5. Tampil\n6. Exit\nPilih menu: ");
+            System.out.print("\n=====MENU=====\n1. Tambah\n2. Edit\n3. Hapus\n4. Cari\n5. Tampil\n6. Exit\nPilih menu: ");
             pilihMenu = input.nextInt();
         }
     }
