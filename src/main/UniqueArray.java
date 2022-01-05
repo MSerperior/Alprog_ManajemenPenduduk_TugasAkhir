@@ -113,4 +113,18 @@ public class UniqueArray {
             }
         }
     }
+    
+    //hapus data berdasarkan NIK
+    public void hapus(int nik){
+        for(int i = 0; i <= n; i++){
+            if(penduduk[i].NIK == nik){
+                // shifting elements
+                for(int j = i; j <= n ; j++){
+                    penduduk[j] = penduduk[j+1];
+                }  
+                //System.out.println("Data berhasil dihapus");
+                n--;
+            }
+        }          
+    }
 }
