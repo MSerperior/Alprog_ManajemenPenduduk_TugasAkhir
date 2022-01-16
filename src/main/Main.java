@@ -74,7 +74,6 @@ public class Main {
                     break;
                 case 3:
                     //hapus
-                    //cek lagi ya
                     System.out.print("Masukkan NIK yang akan dihapus: ");
                     pilih = input.nextInt();
                     arr.hapus(pilih);
