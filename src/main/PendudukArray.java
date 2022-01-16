@@ -123,6 +123,7 @@ public class PendudukArray {
                     penduduk[j] = penduduk[j+1];
                 }  
                 n--;
+                i--;
             }
         }          
     }
