@@ -9,7 +9,7 @@ package main;
  *
  * @author 62821
  */
-public class UniqueArray {
+public class PendudukArray {
 
     Penduduk[] penduduk = new Penduduk[100];
     int n = -1;

@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         
-        UniqueArray arr = new UniqueArray();
+        PendudukArray arr = new PendudukArray();
         Scanner input = new Scanner(System.in);
         int pilihMenu, pilih;
         System.out.println("Data Penduduk");
