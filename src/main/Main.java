@@ -12,16 +12,17 @@ import java.util.Scanner;
  * @author 62821
  */
 public class Main {
+
     public static void main(String[] args) {
-        
+
         PendudukArray arr = new PendudukArray();
         Scanner input = new Scanner(System.in);
         int pilihMenu, pilih;
         System.out.println("Data Penduduk");
-        System.out.print("=====MENU=====\n1. Tambah\n2. Edit\n3. Hapus\n4. Cari\n5. Tampil\n6. Exit\nPilih menu: ");
-        pilihMenu = input.nextInt();
 
-        while (pilihMenu!=6) {
+        do {
+            System.out.print("=====MENU=====\n1. Tambah\n2. Edit\n3. Hapus\n4. Cari\n5. Tampil\n6. Exit\nPilih menu: ");
+            pilihMenu = input.nextInt();
             switch (pilihMenu) {
                 case 1:
                     //tambah
@@ -74,7 +75,7 @@ public class Main {
                 case 3:
                     //hapus
                     //cek lagi ya
-                    System.out.print("Masukkan NIK yang akan dihapus: ");                
+                    System.out.print("Masukkan NIK yang akan dihapus: ");
                     pilih = input.nextInt();
                     arr.hapus(pilih);
                     break;
@@ -112,9 +113,6 @@ public class Main {
                     System.out.println("Input tidak valid!");
                     break;
             }
-
-            System.out.print("\n=====MENU=====\n1. Tambah\n2. Edit\n3. Hapus\n4. Cari\n5. Tampil\n6. Exit\nPilih menu: ");
-            pilihMenu = input.nextInt();
-        }
+        } while (pilihMenu != 6);
     }
 }
