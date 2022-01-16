@@ -69,7 +69,7 @@ public class PendudukArray {
      */
     public void cari(String nama) {
         for (int i = 0; i <= n; i++) {
-            if (penduduk[i].nama == nama) {
+            if (penduduk[i].nama.equals(nama)) {
                 System.out.println(penduduk[i]);
             }
         }
